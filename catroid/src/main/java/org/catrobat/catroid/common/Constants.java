@@ -99,8 +99,8 @@ public final class Constants {
 
 	// Web:
 	private static final String MAIN_URL_PRODUCTION = "https://share.catrob.at";
-	private static final String MAIN_URL_WEBTEST = "https://web-test.catrob.at";
-	public static final String MAIN_URL_HTTPS = BuildConfig.USE_WEB_TEST ? MAIN_URL_WEBTEST : MAIN_URL_PRODUCTION;
+	public static final String MAIN_URL_HTTPS = BuildConfig.MAIN_URL.isEmpty() ?
+			MAIN_URL_PRODUCTION : BuildConfig.MAIN_URL;
 
 	public static final String SHARE_PROGRAM_URL = BASE_URL_HTTPS + "/program/";
 
